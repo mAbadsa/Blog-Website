@@ -40,6 +40,16 @@ app.get('/contact', (req, res) => {
   })
 })
 
+app.get('/compose', (req, res) => {
+  res.render('compose', {
+    title: "Compose"
+  })
+})
+
+app.post('/compose', (req, res) => {
+
+})
+
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
