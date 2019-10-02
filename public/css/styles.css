@@ -11,7 +11,10 @@
     font-size: 12px;
     letter-spacing: 5px;
 }
-.navbar-nav  li a:hover {
+.navbar-nav {
+    flex-direction: row;
+}
+.nav  li a:hover {
     color: #1abc9c !important;
 }
 
