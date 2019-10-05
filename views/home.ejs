@@ -1,10 +1,23 @@
 <%- include('partials/header'); -%>
 
 
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid mb-0">
     <div class="container">
         <h1> <%= title %> </h1>
         <p class="lead"><%= homeStartingContent%></p>
+    </div>
+</div>
+<div class="posts">
+    <div class="container">
+        <h2 class="sec-title">
+            Articles
+        </h2>
+        <% for (let i = 0; i < posts.length; i++) { %>
+            <article class="">
+                <h3><%- posts[i].title %></h3>
+                <p><%- posts[i].content %></p>
+            </article>
+        <% } %>
     </div>
 </div>
 

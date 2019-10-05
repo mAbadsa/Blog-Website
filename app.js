@@ -23,7 +23,8 @@ app.use(express.static("public"));
 app.get('/', (req, res) => {
   res.render('home', {
     title: "Home",
-    homeStartingContent: homeStartingContent
+    homeStartingContent: homeStartingContent,
+    posts: posts
   });
   console.log(posts);
 })
@@ -56,7 +57,6 @@ app.post('/compose', (req, res) => {
 
   if(req.body.postTitle !== "" && req.body.postBody !== "") {
     posts.push(post);
-    console.log(posts);
     res.redirect('/');
   } else {
     res.redirect('/compose');
