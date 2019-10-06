@@ -68,19 +68,24 @@ app.get('/posts/:postName', (req, res) => {
   let reqPostName = _.lowerCase(req.params.postName);
   posts.forEach(post => {
     let postTitle = _.lowerCase(post.title);
+
     if(postTitle === reqPostName) {
-      console.log('Match Found!');
-    } else {
-      console.log("Not Match!");
+      res.render('post', {post: post});
     }
   })
 })
 
-app.post('/posts/:postName', (req, res) => {
-  // console.log(req.params.postName);
-  req.params.postName = req.body.postPage;
-  res.render('post', {posts: posts});
-})
+// app.post('/posts/:postName', (req, res) => {
+//   const postName = req.params.postName;
+//   posts.forEach(post => {
+//     if(postName === post.title) {
+//       req.params.postName = post.title;
+//       res.render('post', {post: post});
+//     } else {
+//       res.redirect('home');
+//     }
+//   })
+// })
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");

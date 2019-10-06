@@ -66,3 +66,26 @@ footer {
 .posts article h3 {
     font-size: 28px;
 }
+/* .visable {
+    display: inline;
+    border: none;
+    background-color: transparent;
+    color: blue;
+    font-size: 28px;
+    outline: none;
+}
+.visable:focus {
+    outline: none;
+}
+.hidden {
+    display: none;
+}
+.post-body-box {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+    bottom: -15px;
+    right: 10px;
+} */
+
